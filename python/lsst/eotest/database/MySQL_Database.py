@@ -7,7 +7,10 @@ from __future__ import absolute_import
 from builtins import zip
 from builtins import object
 import os
-import MySQLdb
+try:
+    import MySQLdb
+except:
+    MySQLdb = None
 from .Parfile import Parfile
 
 db2_imp = MySQLdb
